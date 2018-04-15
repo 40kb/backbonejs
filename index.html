@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- external template -->
+  <!--
+    为什么要写 text/template
+    因为浏览读到它的时候 知道它不是 HTML 也不是 JavaScript
+    所以就会跳过不去解析它!
+   -->
+  <script id="personTemplate" type="text/template">
+    <strong><%= name %></strong> (<%= age %>) - <%= occupation %>
+  </script>
+
+
+  <form id="addTask" action="">
+    <input type="text" placeholder="Your new task">
+    <input type="submit" value="Add Task">
+  </form>
+  <script id="taskTemplate" type="text/template">
+    <span><%= title %></span><button class="edit">Edit</button><button class="delete">Delete</button>
+  </script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+  <script src="notes/13customEvents.js"></script>
+</body>
+</html>

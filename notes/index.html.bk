@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <!-- create our template -->
+  <script id="songTemlate" type="text/template">
+    <%= title %>
+    <button>Listen</button>
+    <% if (plays > 1000) { %>
+      <span class="popular">Popular</span>
+    <% } %>
+  </script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+  <!-- <script src="view.js"></script> -->
+</body>
+</html>
